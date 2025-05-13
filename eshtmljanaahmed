@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio di Psicologia - [Nome Studio]</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+/* Inizio del CSS */
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+color: #333;
+line-height: 1.6;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+/* Header */
+header {
+background-color: #fff;
+padding: 20px 0;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+display: flex;
+align-items: center;
+}
+.logo img {
+height: 50px;
+margin-right: 15px;
+}
+.logo h1 {
+margin: 0;
+color: #007bff;
+}
+nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+}
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+display: flex;
+align-items: center;
+}
+.logo img {
+height: 50px;
+margin-right: 15px;
+}
+.logo h1 {
+margin: 0;
+color: #007bff;
+}
+nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+}
+nav ul li {
+margin-left: 20px;
+}
+nav ul li a {
+text-decoration: none;
+color: #555;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+nav ul li a:hover {
+color: #007bff;
+}
+/* Hero Section */
+.hero {
+background-color: #e9f5ff;
+padding: 80px 0;
+text-align: center;
+}
+.hero .container {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.hero-content {
+max-width: 500px;
+}
+.hero h1 {
+font-size: 2.5em;
+color: #007bff;
+margin-bottom: 20px;
+}
+.hero p {
+font-size: 1.1em;
+color: #555;
+margin-bottom: 30px;
+}
+.hero-image img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button {
+display: inline-block;
+padding: 12px 24px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+.button.primary {
+background-color: #007bff;
+color: #fff;
+}
+.button.primary:hover {
+background-color: #0056b3;
+}
+/* Sections */
+.section {
+padding: 60px 0;
+}
+.section.bg-light {
+background-color: #f9f9f9;
+}
+.section h2 {
+font-size: 2em;
+color: #333;
+text-align: center;
+margin-bottom: 30px;
+}
+/* Chi Siamo */
+.team {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+.member {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+text-align: center;
+}
+.member img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 10px;
+}
+.member h3 {
+color: #007bff;
+margin-top: 0;
+margin-bottom: 5px;
+}
+.member p {
+color: #555;
+font-size: 0.9em;
+}
+/* Servizi */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+.service-card {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+text-align: center;
+}
+.service-card img {
+max-width: 80px;
+height: auto;
+margin-bottom: 15px;
+}
+.service-card h3 {
+color: #007bff;
+margin-top: 0;
+margin-bottom: 10px;
+}
+.service-card p {
+color: #555;
+font-size: 0.95em;
+}
+/* Approccio */
+#approccio ul {
+list-style: disc;
+padding-left: 20px;
+margin-top: 20px;
+}
+#approccio ul li {
+color: #555;
+margin-bottom: 10px;
+}
+/* Contatti */
+.contact-info {
+margin-top: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+.info-item {
+display: flex;
+align-items: center;
+}
+.info-item i {
+font-size: 1.5em;
+color: #007bff;
+margin-right: 15px;
+}
+.info-item p {
+margin: 0;
+}
+.info-item a {
+color: #007bff;
+text-decoration: none;
+}
+.info-item a:hover {
+text-decoration: underline;
+}
+/* Prenotazioni */
+#appointment-form {
+background-color: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-top: 20px;
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+color: #333;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 1em;
+}
+.form-group textarea {
+resize: vertical;
+}
+#appointment-form button[type="submit"] {
+background-color: #007bff;
+color: #fff;
+padding: 12px 24px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1.1em;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+#appointment-form button[type="submit"]:hover {
+background-color: #0056b3;
+}
+.form-message {
+margin-top: 15px;
+padding: 10px;
+border-radius: 4px;
+}
+.form-message.success {
+background-color: #d4edda;
+color: #155724;
+border: 1px solid #c3e6cb;
+}
+.form-message.error {
+background-color: #f8d7da;
+color: #721c24;
+border: 1px solid #f5c6cb;
+}
+/* Footer */
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 20px 0;
+font-size: 0.9em;
+}
+footer .container {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+footer p {
+margin: 5px 0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+.container {
+padding: 15px;
+}
+header .container {
+flex-direction: column;
+align-items: flex-start;
+}
+.logo {
+margin-bottom: 15px;
+}
+nav ul {
+flex-direction: column;
+width: 100%;
+}
+nav ul li {
+margin: 10px 0;
+}
+.hero .container {
+flex-direction: column;
+text-align: center;
+}
+.hero-content {
+margin-bottom: 30px;
+}
+.team,
+.services-grid,
+.contact-info {
+grid-template-columns: 1fr;
+}
+}
+/* Fine del CSS */
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">
+<img src="images/logo.png" alt="Logo Studio di Psicologia">
+<h1>[Nome Studio]</h1>
+</div>
+<nav>
+<ul>
+<li><a href="#chi-siamo">Chi Siamo</a></li>
+<li><a href="#servizi">Servizi</a></li>
+<li><a href="#approccio">Il Nostro Approccio</a></li>
+<li><a href="#contatti">Contatti</a></li>
+<li><a href="#prenotazioni">Prenotazioni</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<section id="hero" class="hero">
+<div class="container">
+<div class="hero-content">
+<h1>Benvenuti nel Nostro Studio di Psicologia</h1>
+<p>Supporto professionale per il tuo benessere emotivo e mentale.</p>
+<a href="#prenotazioni" class="button primary">Prenota una Consulenza</a>
+</div>
+<div class="hero-image">
+<img src="images/hero-image.jpg" alt="Immagine Accogliente Studio">
+</div>
+</div>
+</section>
+<section id="chi-siamo" class="section">
+<div class="container">
+<h2>Chi Siamo</h2>
+<p>Siamo un team di psicologi esperti e qualificati, dedicati a fornire un supporto
+empatico e professionale per affrontare le sfide della vita. Il nostro obiettivo è creare un
+ambiente sicuro e accogliente dove tu possa sentirtiCompreso e supportato nel tuo percorso
+di crescita personale.</p>
+<div class="team">
+<div class="member">
+<img src="images/dottoressa1.jpg" alt="Dottoressa [Nome]">
+<h3>Dott./Dott.ssa [Nome]</h3>
+<p>Psicologo/a Clinico/a</p>
+<p>[Breve descrizione delle specializzazioni]</p>
+</div>
+<div class="member">
+<img src="images/dottore1.jpg" alt="Dottor [Nome]">
+<h3>Dott./Dott.ssa [Nome]</h3>
+<p>Psicoterapeuta</p>
+<p>[Breve descrizione delle specializzazioni]</p>
+</div>
+</div>
+</div>
+</section>
+<section id="servizi" class="section bg-light">
+<div class="container">
+<h2>I Nostri Servizi</h2>
+<div class="services-grid">
+<div class="service-card">
+<img src="images/servizio1.jpg" alt="Psicoterapia Individuale">
+<h3>Psicoterapia Individuale</h3>
+<p>Un percorso personalizzato per affrontare ansia, depressione, stress e
+altre difficoltà emotive.</p>
+</div>
+<div class="service-card">
+<img src="images/servizio2.jpg" alt="Terapia di Coppia">
+<h3>Terapia di Coppia</h3>
+<p>Supporto per migliorare la comunicazione, risolvere conflitti e rafforzare il
+legame di coppia.</p>
+</div>
+<div class="service-card">
+<img src="images/servizio3.jpg" alt="Terapia Familiare">
+<h3>Terapia Familiare</h3>
+<p>Interventi mirati per affrontare dinamiche familiari complesse e
+promuovere il benessere di tutto il nucleo.</p>
+</div>
+<div class="service-card">
+<img src="images/servizio4.jpg" alt="Consulenza Psicologica">
+<h3>Consulenza Psicologica</h3>
+<p>Un supporto mirato per affrontare momenti di crisi, prendere decisioni
+importanti o ottenere un parere professionale.</p>
+</div>
+<div class="service-card">
+<img src="images/servizio5.jpg" alt="Sostegno alla Genitorialità">
+<h3>Sostegno alla Genitorialità</h3>
+<p>Guidare i genitori nell'affrontare le sfide educative e relazionali con i
+propri figli.</p>
+</div>
+<div class="service-card">
+<img src="images/servizio6.jpg" alt="Valutazioni Psicodiagnostiche">
+<h3>Valutazioni Psicodiagnostiche</h3>
+<p>Utilizzo di test e colloqui per comprendere meglio il funzionamento
+psicologico e orientare gli interventi.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="approccio" class="section">
+<div class="container">
+<h2>Il Nostro Approccio</h2>
+<p>Adottiamo un approccio integrato, che tiene conto delle specificità di ogni
+individuo e delle sue esigenze. Ci basiamo su solide evidenze scientifiche e utilizziamo
+tecniche terapeutiche diverse, adattandole al percorso unico di ogni persona. L'ascolto
+attivo, l'empatia e la creazione di una relazione terapeutica di fiducia sono al centro del
+nostro lavoro.</p>
+<ul>
+<li>Approccio centrato sulla persona</li>
+<li>Tecniche evidence-based</li>
+<li>Ambiente accogliente e riservato</li>
+<li>Rispetto della privacy e della riservatezza</li>
+</ul>
+</div>
+</section>
+<section id="contatti" class="section bg-light">
+<div class="container">
+<h2>Contatti</h2>
+<p>Siamo a tua disposizione per rispondere a qualsiasi domanda o per fissare un
+primo colloquio conoscitivo.</p>
+<div class="contact-info">
+<div class="info-item">
+<i class="fas fa-map-marker-alt"></i>
